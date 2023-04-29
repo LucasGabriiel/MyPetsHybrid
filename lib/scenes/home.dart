@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/container_pet_card.dart';
+import '../components/container_schedule_item.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -50,17 +51,13 @@ class HomePage extends StatelessWidget {
                             ListView.builder(
                               itemCount: 20,
                               itemBuilder: (context, index) {
-                                return ListTile(
-                                  title: Text('Item $index'),
-                                );
+                                return ScheduleItem();
                               },
                             ),
                             ListView.builder(
                               itemCount: 15,
                               itemBuilder: (context, index) {
-                                return ListTile(
-                                  title: Text('Item ${index + 20}'),
-                                );
+                                return ScheduleItem();
                               },
                             ),
                           ],
