@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_pets/scenes/home.dart';
 import 'package:my_pets/scenes/settings.dart';
+import 'package:my_pets/scenes/splash.dart';
 import 'package:my_pets/themes/my_pets_themes.dart';
 
 class MyPetsApp extends StatelessWidget {
@@ -19,7 +20,11 @@ class MyPetsApp extends StatelessWidget {
          ThemeMode.dark for dark theme
       */
       debugShowCheckedModeBanner: false,
-      home: const MyPetsTabContainer(),
+      initialRoute: "/splash",
+      routes: {
+        "/splash" : (context) => const SplashPage(),
+        "/home" : (context) => HomePage()
+      },
     );
   }
 }

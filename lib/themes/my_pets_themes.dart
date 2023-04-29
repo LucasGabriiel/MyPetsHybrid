@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_pets/assets/styles.dart';
 
 abstract class MyPetThemes {
   static final darkTheme =  ThemeData(
               textTheme: const TextTheme(
-                displayLarge: TextStyle(color: Colors.deepPurpleAccent),
-                displayMedium: TextStyle(color: Colors.deepPurpleAccent),
-                bodyMedium: TextStyle(color: Colors.deepPurpleAccent),
-                titleMedium: TextStyle(color: Colors.orange),
+                displayLarge: TextStyle(color: Color(0xFFD3D3D3)),
+                displayMedium: TextStyle(color: Color(0xFFD3D3D3)),
+                bodyMedium: TextStyle(color: Color(0xFFD3D3D3)),
+                titleMedium: TextStyle(color: Color(0xFFED6335)),
               ),
               appBarTheme: const AppBarTheme(
                 backgroundColor: Colors.transparent,
@@ -20,16 +19,16 @@ abstract class MyPetThemes {
               ),
               brightness: Brightness.dark,
               /* dark theme settings */
-              primaryColor: Colors.indigo,
+              primaryColor: const Color(0xFF064C72),
               
     );
 
     static final brightTheme =  ThemeData(
             textTheme: const TextTheme(
-                displayLarge: TextStyle(color: Colors.deepPurple),
-                displayMedium: TextStyle(color: Colors.deepPurple),
-                bodyMedium: TextStyle(color: Colors.deepPurple),
-                titleMedium: TextStyle(color: Colors.pink),
+                displayLarge: TextStyle(color: Color(0xFFEEEEEE)),
+                displayMedium: TextStyle(color: Color(0xFFEEEEEE)),
+                bodyMedium: TextStyle(color: Color(0xFFEEEEEE)),
+                titleMedium: TextStyle(color: Color(0xFFED6335)),
               ),
             appBarTheme: const AppBarTheme(
               backgroundColor: Colors.transparent,
