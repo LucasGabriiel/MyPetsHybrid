@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/container_pet_card.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,21 +18,10 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: 10,
               itemBuilder: (context, index) {
-                return Container(
-                  width: 340,
-                  height: 170,
-                  margin: EdgeInsets.all(6),
-                  decoration: BoxDecoration(
-                    color: Colors.indigo,
-                    borderRadius: BorderRadius.circular(26),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Item $index',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                );
+               return Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: ContainerPetDescription(),
+               );
               },
             ),
           ),
