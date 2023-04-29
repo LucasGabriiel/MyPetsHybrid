@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_pets/scenes/home.dart';
+import 'package:my_pets/scenes/settings.dart';
 
 class MyPetsApp extends StatelessWidget {
   const MyPetsApp({super.key});
@@ -38,10 +39,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    Text(
-      'Index 1: Settings',
-      style: optionStyle,
-    ),
+    Settings(),
   ];
 
   void _onItemTapped(int index) {

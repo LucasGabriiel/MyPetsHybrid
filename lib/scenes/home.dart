@@ -9,17 +9,21 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
+          const SizedBox(height: 40),
           SizedBox(
-            height: 100,
+            height: 200,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 10,
               itemBuilder: (context, index) {
                 return Container(
-                  width: 100,
-                  height: 100,
-                  margin: EdgeInsets.all(10),
-                  color: Colors.blue,
+                  width: 340,
+                  height: 170,
+                  margin: EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                    color: Colors.indigo,
+                    borderRadius: BorderRadius.circular(26),
+                  ),
                   child: Center(
                     child: Text(
                       'Item $index',
@@ -30,54 +34,57 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
-          const SizedBox(height: 180),
-          DefaultTabController(
-            length: 2,
-            child: Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(26.0),
-                child: Column(
-                children: [
-                  Material(
-                  color: Colors.indigo,
-                  child: TabBar(
-                            indicatorColor: Colors.red,
-                            tabs: [
-                              Tab(
-                                text: 'Next',
-                              ),
-                              Tab(
-                                text: 'Past',
-                              ),
-                            ],
-                          ),
-                  ),
-                  Expanded(
-                    child: TabBarView(
-                      children: [
-                        ListView.builder(
-                          itemCount: 20,
-                          itemBuilder: (context, index) {
-                            return ListTile(
-                              title: Text('Item $index'),
-                            );
-                          },
+          const SizedBox(height: 60),
+          Expanded(
+            child: Container(
+              child: DefaultTabController(
+                length: 2,
+                child: Expanded(
+                    child: Column(
+                    children: [
+                    TabBar(
+                      indicatorColor: Colors.red,
+                      tabs: [
+                        Tab(
+                          text: 'Next',
                         ),
-                        ListView.builder(
-                          itemCount: 15,
-                          itemBuilder: (context, index) {
-                            return ListTile(
-                              title: Text('Item ${index + 20}'),
-                            );
-                          },
+                        Tab(
+                          text: 'Past',
                         ),
                       ],
                     ),
+                    Expanded(
+                        child: TabBarView(
+                          children: [
+                            ListView.builder(
+                              itemCount: 20,
+                              itemBuilder: (context, index) {
+                                return ListTile(
+                                  title: Text('Item $index'),
+                                );
+                              },
+                            ),
+                            ListView.builder(
+                              itemCount: 15,
+                              itemBuilder: (context, index) {
+                                return ListTile(
+                                  title: Text('Item ${index + 20}'),
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                )
               ),
+              margin: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.indigo,
+                borderRadius: BorderRadius.circular(26),
               ),
-            )
+            ),
           ),
         ],
       ),
