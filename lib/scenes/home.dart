@@ -6,6 +6,9 @@ import '../components/container_schedule_item.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final currentTheme = Theme.of(context).colorScheme;
+
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Pets'),
@@ -36,7 +39,7 @@ class HomePage extends StatelessWidget {
                     child: Column(
                     children: [
                     TabBar(
-                      indicatorColor: Colors.red,
+                      indicatorColor: currentTheme.surface,
                       tabs: [
                         Tab(
                           text: 'Next',
@@ -70,7 +73,7 @@ class HomePage extends StatelessWidget {
               ),
               margin: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.indigo,
+                color: currentTheme.tertiary,
                 borderRadius: BorderRadius.circular(26),
               ),
             ),

@@ -8,6 +8,7 @@ class ContainerPetDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     final currentTheme = Theme.of(context).colorScheme;
 
+
     return  Padding(
       padding: const EdgeInsets.only(top: 12),
       child: Container(
@@ -18,67 +19,86 @@ class ContainerPetDescription extends StatelessWidget {
           color: currentTheme.tertiary,
         ),
         child: Padding(
-          padding: const EdgeInsets.only(left: 16 ),
+          padding: const EdgeInsets.only(left: 16, right: 16 ),
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 16, bottom: 16 ),
                   child: Row(
-                    children: const [
-                      Text("Pet Name",
-                          style: TextStyle(
-                            color: Color(0xFFEEEEEE),
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,)
+                    children:[
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Pet Name",
+                              style: TextStyle(
+                                color: currentTheme.primary,
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,)
+                          ),
+                          const Text ("Age:",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,)
+                          ),
+                          const Text ("Birth Date:",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,)
+                          ),
+                          const Text ("Next Schedule:",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,)
+                          ),
+                          const Text ("Bloody tipe:",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,)
+                          ),
+                        ],
+                      ),
+
+                      Spacer(),
+                      Container(
+                        clipBehavior: Clip.hardEdge,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Image.asset("images/Diana.jpeg",
+                        height: 80,
+                        width: 80,
+                        fit: BoxFit.cover,),
                       )
                     ],
                   ),
                 ),
-                const Text ("Age:",
-                    style: TextStyle(
-                      color: Color(0xFFEEEEEE),
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,)
-                ),
-                const Text ("Birth Date:",
-                    style: TextStyle(
-                      color: Color(0xFFEEEEEE),
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,)
-                ),
-                const Text ("Next Schedule:",
-                    style: TextStyle(
-                      color: Color(0xFFEEEEEE),
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,)
-                ),
-                const Text ("Bloody tipe:",
-                    style: TextStyle(
-                      color: Color(0xFFEEEEEE),
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,)
-                ),
+
                 const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.only(right: 4.0),
-                  child: SizedBox(height: 30, 
+                  child: SizedBox(height: 30,
                   child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: 10,
-                        itemBuilder: (context, index) {                  
+                        itemBuilder: (context, index) {
                          return Padding(
                            padding: const EdgeInsets.only(right: 8.0),
                            child: Container(
                               decoration: BoxDecoration(
                                 color: Colors.transparent,
                                 borderRadius: BorderRadius.circular(15),
-                                border: Border.all(color: const Color(0xFFEEEEEE))
+                                border: Border.all(color: currentTheme.primary)
                               ),
                               width: 84,
                               height: 30,
-                              child: const Center(child: Text('Teste')),
-                            ),
+                              child: Center(
+                                      child: Text('Teste',
+                                              style: TextStyle(
+                                                      color: currentTheme.primary,)
+                                          ),
+                                        ),
+                         )
                          );
                         }
                     ),
