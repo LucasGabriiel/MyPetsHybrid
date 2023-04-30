@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_pets/my_pets_app.dart';
 
+import '../model/Pet.dart';
+
 class ContainerPetDescription extends StatelessWidget {
-  const ContainerPetDescription({Key? key}) : super(key: key);
-  
+  const ContainerPetDescription(this.pet, {super.key});
+  final Pet pet;
+
   @override
   Widget build(BuildContext context) {
     final currentTheme = Theme.of(context).colorScheme;
-
 
     return  Padding(
       padding: const EdgeInsets.only(top: 12),
@@ -30,29 +32,29 @@ class ContainerPetDescription extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Pet Name",
+                          Text(pet.name,
                               style: TextStyle(
                                 color: currentTheme.primary,
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,)
                           ),
-                          const Text ("Age:",
-                              style: TextStyle(
+                          Text ("Age: ${pet.age}",
+                              style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,)
                           ),
-                          const Text ("Birth Date:",
-                              style: TextStyle(
+                          Text ("Birth Date:",
+                              style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,)
                           ),
-                          const Text ("Next Schedule:",
-                              style: TextStyle(
+                          Text ("Next Schedule:",
+                              style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,)
                           ),
-                          const Text ("Bloody tipe:",
-                              style: TextStyle(
+                          Text ("Bloody tipe:",
+                              style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,)
                           ),
@@ -65,7 +67,7 @@ class ContainerPetDescription extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15)
                         ),
-                        child: Image.asset("images/Diana.jpeg",
+                        child: Image.asset("images/${pet.imageName}",
                         height: 80,
                         width: 80,
                         fit: BoxFit.cover,),

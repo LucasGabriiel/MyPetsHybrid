@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:my_pets/database/mock_data_base.dart';
 
 import '../components/container_pet_card.dart';
 import '../components/container_schedule_item.dart';
+import '../model/Pet.dart';
 
 class HomePage extends StatelessWidget {
+  List<Pet> petsList = MockDataBase.pets;
+
   @override
   Widget build(BuildContext context) {
     final currentTheme = Theme.of(context).colorScheme;
@@ -20,11 +24,11 @@ class HomePage extends StatelessWidget {
             height: 200,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
+              itemCount: petsList.length,
               itemBuilder: (context, index) {
                return Padding(
                  padding: const EdgeInsets.all(8.0),
-                 child: ContainerPetDescription(),
+                 child: ContainerPetDescription(petsList[index]),
                );
               },
             ),
