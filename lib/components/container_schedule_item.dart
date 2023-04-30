@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:my_pets/model/ScheduleItem.dart';
 
 class ScheduleItem extends StatelessWidget {
-  const ScheduleItem({Key? key}) : super(key: key);
-
+  const ScheduleItem(this.appointment, {super.key});
+  final ScheduleAppointment appointment;
+  
   @override
   Widget build(BuildContext context) {
     final currentTheme = Theme.of(context).colorScheme;
 
     return  Padding(
       padding: const EdgeInsets.all(8),
-      child: Container(
-        child: Column(
+      child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(children: [
@@ -39,7 +40,7 @@ class ScheduleItem extends StatelessWidget {
                 ])
               ],),
             ),
-          ],),
+          ]
       ),
     );
   }

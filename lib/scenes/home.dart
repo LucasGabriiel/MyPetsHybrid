@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_pets/database/mock_data_base.dart';
+import 'package:my_pets/model/ScheduleItem.dart';
 
 import '../components/container_pet_card.dart';
 import '../components/container_schedule_item.dart';
@@ -7,6 +8,8 @@ import '../model/Pet.dart';
 
 class HomePage extends StatelessWidget {
   List<Pet> petsList = MockDataBase.pets;
+  List<ScheduleAppointment> nextScheduledAppointments = MockDataBase.nextSchedules;
+  List<ScheduleAppointment> pastScheduledAppointments = MockDataBase.pastSchedules;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +59,7 @@ class HomePage extends StatelessWidget {
                         children: [
                         TabBar(
                           indicatorColor: currentTheme.surface,
-                          tabs: [
+                          tabs: const [
                             Tab(
                               text: 'Next',
                             ),
@@ -66,21 +69,24 @@ class HomePage extends StatelessWidget {
                           ],
                         ),
                         Expanded(
-                            child: TabBarView(
-                              children: [
-                                ListView.builder(
-                                  itemCount: 20,
-                                  itemBuilder: (context, index) {
-                                    return ScheduleItem();
-                                  },
-                                ),
-                                ListView.builder(
-                                  itemCount: 15,
-                                  itemBuilder: (context, index) {
-                                    return ScheduleItem();
-                                  },
-                                ),
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
+                              child: TabBarView(
+                                children: [
+                                  ListView.builder(
+                                    itemCount: nextScheduledAppointments.length,
+                                    itemBuilder: (context, index) {
+                                      return ScheduleItem(nextScheduledAppointments[index]);
+                                    },
+                                  ),
+                                  ListView.builder(
+                                    itemCount: pastScheduledAppointments.length,
+                                    itemBuilder: (context, index) {
+                                      return ScheduleItem(pastScheduledAppointments[index]);
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
