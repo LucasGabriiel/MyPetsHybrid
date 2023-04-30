@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_pets/model/ScheduleItem.dart';
+import 'package:my_pets/model/ScheduleAppointment.dart';
 
 class ScheduleItem extends StatelessWidget {
   const ScheduleItem(this.appointment, {super.key});

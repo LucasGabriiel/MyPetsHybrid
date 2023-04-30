@@ -1,4 +1,3 @@
-
 class Pet {
   final String name;
   final String age;
