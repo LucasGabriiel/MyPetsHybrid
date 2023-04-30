@@ -16,16 +16,16 @@ class ScheduleItem extends StatelessWidget {
           children: [
             Row(children: [
               Text(
-                "Schedule title", 
+                appointment.name,
                 style: TextStyle(
                         color: currentTheme.primary,
                         fontSize: 14,
                         fontWeight: FontWeight.bold),
                       ),
               const SizedBox(width: 8),
-              Text("00/00/0000 at 00:00",
+              Text("${appointment.date} at ${appointment.hour}",
                    style: const TextStyle(fontSize: 10)
-                   )
+                   ),
             ]),
             const SizedBox(width: 12),
             Padding(
@@ -33,10 +33,10 @@ class ScheduleItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                Text("Schedule description here", style: TextStyle(fontSize: 12)),
+                Text(appointment.description, style: TextStyle(fontSize: 12)),
                 Row(children: [
                   const Text("Address: ", style: TextStyle(fontSize: 12)),
-                  Text(" Street xxxxxxxxxxx", style: TextStyle(fontSize: 10))
+                  Text(appointment.address, style: TextStyle(fontSize: 10))
                 ])
               ],),
             ),
