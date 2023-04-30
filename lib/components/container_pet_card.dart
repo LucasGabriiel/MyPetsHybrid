@@ -43,17 +43,17 @@ class ContainerPetDescription extends StatelessWidget {
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,)
                           ),
-                          Text ("Birth Date:",
+                          Text ("Birth Date: ${pet.birthDate}",
                               style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,)
                           ),
-                          Text ("Next Schedule:",
+                          Text ("Next Schedule: ${pet.nextSchedule}",
                               style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,)
                           ),
-                          Text ("Bloody tipe:",
+                          Text ("Bloody tipe: ${pet.bloodType}",
                               style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,)
@@ -82,7 +82,7 @@ class ContainerPetDescription extends StatelessWidget {
                   child: SizedBox(height: 30,
                   child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                        itemCount: 10,
+                        itemCount: pet.tags.length,
                         itemBuilder: (context, index) {
                          return Padding(
                            padding: const EdgeInsets.only(right: 8.0),
@@ -92,13 +92,18 @@ class ContainerPetDescription extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(15),
                                 border: Border.all(color: currentTheme.primary)
                               ),
-                              width: 84,
                               height: 30,
                               child: Center(
-                                      child: Text('Teste',
-                                              style: TextStyle(
-                                                      color: currentTheme.primary,)
-                                          ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 3, right: 3),
+                                        child: Text(pet.tags[index],
+                                                maxLines: 1,
+                                                style: TextStyle(
+                                                        color: currentTheme.primary,
+                                                        fontSize: 10
+                                                )
+                                            ),
+                                      ),
                                         ),
                          )
                          );
