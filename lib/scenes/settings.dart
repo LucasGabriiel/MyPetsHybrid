@@ -17,7 +17,7 @@ class Settings extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: const EdgeInsets.only(left: 16, top: 6, right: 16, bottom: 6),
-            child: Text(options[index],style: TextStyle(color: Colors.black),),
+            child: Text(options[index],style: const TextStyle(color: Colors.black),),
           );
         }
         )

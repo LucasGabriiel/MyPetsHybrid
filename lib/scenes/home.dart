@@ -37,48 +37,57 @@ class HomePage extends StatelessWidget {
           Expanded(
             child: Container(
               clipBehavior: Clip.hardEdge,
-              child: DefaultTabController(
-                length: 2,
-                child: Expanded(
-                    child: Column(
-                    children: [
-                    TabBar(
-                      indicatorColor: currentTheme.surface,
-                      tabs: [
-                        Tab(
-                          text: 'Next',
-                        ),
-                        Tab(
-                          text: 'Past',
-                        ),
-                      ],
-                    ),
-                    Expanded(
-                        child: TabBarView(
-                          children: [
-                            ListView.builder(
-                              itemCount: 20,
-                              itemBuilder: (context, index) {
-                                return ScheduleItem();
-                              },
-                            ),
-                            ListView.builder(
-                              itemCount: 15,
-                              itemBuilder: (context, index) {
-                                return ScheduleItem();
-                              },
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              ),
               margin: EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: currentTheme.tertiary,
                 borderRadius: BorderRadius.circular(26),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(left: 12.0, top: 18.0),
+                    child: Text("Schedule", style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold)),
+                  ),
+                  DefaultTabController(
+                    length: 2,
+                    child: Expanded(
+                        child: Column(
+                        children: [
+                        TabBar(
+                          indicatorColor: currentTheme.surface,
+                          tabs: [
+                            Tab(
+                              text: 'Next',
+                            ),
+                            Tab(
+                              text: 'Past',
+                            ),
+                          ],
+                        ),
+                        Expanded(
+                            child: TabBarView(
+                              children: [
+                                ListView.builder(
+                                  itemCount: 20,
+                                  itemBuilder: (context, index) {
+                                    return ScheduleItem();
+                                  },
+                                ),
+                                ListView.builder(
+                                  itemCount: 15,
+                                  itemBuilder: (context, index) {
+                                    return ScheduleItem();
+                                  },
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ),
+                ],
               ),
             ),
           ),
