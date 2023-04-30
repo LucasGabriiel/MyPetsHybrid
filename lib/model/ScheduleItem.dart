@@ -1,8 +1,9 @@
 class ScheduleAppointment {
   final String name;
-  final String dateAndhour;
+  final String date;
+  final String hour;
   final String description;
   final String address;
 
-  ScheduleAppointment(this.name, this.dateAndhour, this.description, this.address);
+  ScheduleAppointment(this.name, this.date, this.hour, this.description, this.address);
 }

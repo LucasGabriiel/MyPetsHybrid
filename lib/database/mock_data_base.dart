@@ -11,7 +11,15 @@ abstract class MockDataBase {
     Pet("Jubileu", "4", "07/12/2019", "O+", "Jubileu.jpeg", "10/07/2023", ["bee allergy"])
   ];
 
-  static List<ScheduleAppointment> schedules = [
-    
+  static List<ScheduleAppointment> nextSchedules = [
+    ScheduleAppointment("Jake", "07/05/23", "14:20", "Blood test, fast for at least 8 hours ", "Rua Santo Antonio" ),
+    ScheduleAppointment("Diana", "19/06/23" ,"08:30", "Routine exams, bring stool sample and saliva sample", "Rua Santo Antonio"),
+    ScheduleAppointment("Jubileu", "10/07/23", "09:45", "Allergy to some food, fasting for 12 hours, blood test and observation", "Rua Santo Antonio")
+  ];
+
+  static List<ScheduleAppointment> pastSchedules = [
+    ScheduleAppointment("Diana", "10/04/23" ,"09:00", "Allergy to some food, fasting for 12 hours, blood test and observation", "Rua Santo Antonio"),
+    ScheduleAppointment("Jubileu", "12/11/22", "13:00","Blood test, fast for at least 8 hours ", "Rua Santo Antonio"),
+    ScheduleAppointment("Jake", "18/12/22", "18:20", "Routine exams, bring stool sample and saliva sample", "Rua Santo Antonio" )
   ];
 }
