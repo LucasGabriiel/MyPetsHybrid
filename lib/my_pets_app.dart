@@ -4,6 +4,9 @@ import 'package:my_pets/scenes/settings.dart';
 import 'package:my_pets/scenes/splash.dart';
 import 'package:my_pets/themes/my_pets_themes.dart';
 
+
+final globalNavigatorKey = GlobalKey<NavigatorState>();
+
 class MyPetsApp extends StatelessWidget {
   const MyPetsApp({super.key});
 
@@ -12,6 +15,7 @@ class MyPetsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'My Pets',
+      navigatorKey: globalNavigatorKey,
       theme: MyPetThemes.brightTheme,
       darkTheme: MyPetThemes.darkTheme,
       themeMode: ThemeMode.system, 
@@ -23,7 +27,7 @@ class MyPetsApp extends StatelessWidget {
       initialRoute: "/splash",
       routes: {
         "/splash" : (context) => const SplashPage(),
-        "/home" : (context) => HomePage()
+        "/home" : (context) => const MyPetsTabContainer()
       },
     );
   }

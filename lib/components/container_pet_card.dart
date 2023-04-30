@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:my_pets/my_pets_app.dart';
 
 class ContainerPetDescription extends StatelessWidget {
   const ContainerPetDescription({Key? key}) : super(key: key);
-
+  
   @override
   Widget build(BuildContext context) {
+    final currentTheme = Theme.of(context).colorScheme;
+
     return  Padding(
       padding: const EdgeInsets.only(top: 12),
       child: Container(
@@ -12,7 +15,7 @@ class ContainerPetDescription extends StatelessWidget {
         width: 328,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: const Color(0xFF064C72),
+          color: currentTheme.tertiary,
         ),
         child: Padding(
           padding: const EdgeInsets.only(left: 16 ),
@@ -56,37 +59,31 @@ class ContainerPetDescription extends StatelessWidget {
                       fontSize: 12,
                       fontWeight: FontWeight.bold,)
                 ),
-                const SizedBox(height: 16,),
-                Container(
-                  decoration: BoxDecoration(
-                      color: const Color(0xFF064C72),
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(color: const Color(0xFFEEEEEE))
-                  ),
-                  width: 84,
-                  height: 30,
-                  child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            onTap: (){},
-                            child: const Center(
-                              child: Text(
-                                "Teste",
-                                style: TextStyle(
-                                    color: Color(0xFFEEEEEE),
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 12
-                                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.only(right: 4.0),
+                  child: SizedBox(height: 30, 
+                  child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 10,
+                        itemBuilder: (context, index) {                  
+                         return Padding(
+                           padding: const EdgeInsets.only(right: 8.0),
+                           child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(15),
+                                border: Border.all(color: const Color(0xFFEEEEEE))
                               ),
+                              width: 84,
+                              height: 30,
+                              child: const Center(child: Text('Teste')),
                             ),
-                          ),
-                        ),
-                      ]
-                  ),
-                ),
+                         );
+                        }
+                    ),
+                    ),
+                )
               ]
           ),
         ),

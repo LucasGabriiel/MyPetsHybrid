@@ -29,6 +29,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 60),
           Expanded(
             child: Container(
+              clipBehavior: Clip.hardEdge,
               child: DefaultTabController(
                 length: 2,
                 child: Expanded(

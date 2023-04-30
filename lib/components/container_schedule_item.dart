@@ -6,10 +6,9 @@ class ScheduleItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: const EdgeInsets.only(top: 107),
+      padding: const EdgeInsets.all(8),
       child: Container(
-        height: 350,
-        width: 105,
+        height: 108,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Color(0xFFf5f5f5),

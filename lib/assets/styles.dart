@@ -37,13 +37,21 @@ abstract class Styles {
     color: CupertinoColors.inactiveGray,
   );
 
-  static const Color productRowDivider = Color(0xFFD9D9D9);
 
-  static const Color scaffoldBackground = Color(0xfff0f0f0);
+// Bright mode
+  static const Color productRowDividerBright = Color(0xFFD9D9D9);
+  static const Color neutralColorBright = Color(0xFF064C72);
+  static const Color primaryColorBright = Color(0xFFFFFFFF);
+  static const Color secundaryColorBright = Color(0xFFF5F5F5);
+  static const Color accentColorBright = Color(0xFFF0943F);
+  static const Color backgroundColorBright = Color(0xFFEEEEEE);
 
-  static const Color searchBackground = Color(0xffe0e0e0);
 
-  static const Color searchCursorColor = Color.fromRGBO(0, 122, 255, 1);
-
-  static const Color searchIconColor = Color.fromRGBO(128, 128, 128, 1);
+// Dark Mode
+  static const Color productRowDividerDark = Color(0xFFD9D9D9);
+  static const Color neutralColorDark = Color(0xFF212629);
+  static const Color primaryColorDark = Color(0xFF81D4FA);
+  static const Color secundaryColorDark = Color(0xFFEEEEEE);
+  static const Color accentColorDark = Color(0xFFED6335);
+  static const Color backgroundColorDark = Color(0xFF000000);
 }
