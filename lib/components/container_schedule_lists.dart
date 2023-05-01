@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
-import '../model/ScheduleAppointment.dart';
+import 'package:my_pets/assets/styles.dart';
+import 'package:my_pets/model/schedlue_appointment.dart';
 import 'container_schedule_item.dart';
 
 
@@ -25,9 +24,9 @@ class SchedulerListContainer extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Padding(
-                    padding: EdgeInsets.only(left: 12.0, top: 18.0),
-                    child: Text("Schedule", style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold)),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12.0, top: 18.0),
+                    child: Text("Schedule", style: Styles.header1.copyWith(color: currentTheme.primary)),
                   ),
                   DefaultTabController(
                     length: 2,

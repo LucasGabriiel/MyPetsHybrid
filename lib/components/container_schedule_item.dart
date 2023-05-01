@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_pets/model/ScheduleAppointment.dart';
+import 'package:my_pets/assets/styles.dart';
+import 'package:my_pets/model/schedlue_appointment.dart';
 
 class ScheduleItem extends StatelessWidget {
   const ScheduleItem(this.appointment, {super.key});
@@ -17,14 +18,11 @@ class ScheduleItem extends StatelessWidget {
             Row(children: [
               Text(
                 appointment.name,
-                style: TextStyle(
-                        color: currentTheme.primary,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold),
-                      ),
+                style: Styles.header3.copyWith(color: currentTheme.primary)
+                ),
               const SizedBox(width: 8),
               Text("${appointment.date} at ${appointment.hour}",
-                   style: const TextStyle(fontSize: 10)
+                   style: Styles.body2
                    ),
             ]),
             const SizedBox(width: 12),
@@ -33,10 +31,10 @@ class ScheduleItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                Text(appointment.description, style: TextStyle(fontSize: 12)),
+                Text(appointment.description, style: Styles.body1),
                 Row(children: [
-                  const Text("Address: ", style: TextStyle(fontSize: 12)),
-                  Text(appointment.address, style: TextStyle(fontSize: 10))
+                  const Text("Address: ", style: Styles.body1),
+                  Text(appointment.address, style: Styles.body2)
                 ])
               ],),
             ),

@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_pets/components/container_pets_list.dart';
 import 'package:my_pets/components/container_schedule_lists.dart';
 import 'package:my_pets/database/mock_data_base.dart';
-import 'package:my_pets/model/ScheduleAppointment.dart';
-
-import '../model/Pet.dart';
+import 'package:my_pets/model/schedlue_appointment.dart';
+import 'package:my_pets/model/pet.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});

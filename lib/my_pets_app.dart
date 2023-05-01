@@ -42,11 +42,9 @@ class MyPetsTabContainer extends StatefulWidget {
 
 class _MyPetsTabContainer extends State<MyPetsTabContainer> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static final List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    Settings(),
+    const Settings(),
   ];
 
   void _onItemTapped(int index) {

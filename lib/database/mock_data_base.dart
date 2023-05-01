@@ -1,5 +1,5 @@
-import '../model/Pet.dart';
-import '../model/ScheduleAppointment.dart';
+import 'package:my_pets/model/pet.dart';
+import 'package:my_pets/model/schedlue_appointment.dart';
 
 abstract class MockDataBase {
   static List<Pet> pets = [ 
