@@ -57,10 +57,9 @@ class ContainerPetDescription extends StatelessWidget {
                               style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,)
-                          ),
+                          )
                         ],
                       ),
-
                       Spacer(),
                       Container(
                         clipBehavior: Clip.hardEdge,

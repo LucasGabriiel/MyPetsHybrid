@@ -3,6 +3,7 @@ import 'package:my_pets/scenes/home.dart';
 import 'package:my_pets/scenes/settings.dart';
 import 'package:my_pets/scenes/splash.dart';
 import 'package:my_pets/themes/my_pets_themes.dart';
+import 'package:flutter/cupertino.dart';
 
 
 final globalNavigatorKey = GlobalKey<NavigatorState>();
@@ -63,8 +64,8 @@ class _MyPetsTabContainer extends State<MyPetsTabContainer> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(CupertinoIcons.paw),
+            label: 'Pets',
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
