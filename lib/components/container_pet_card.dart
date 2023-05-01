@@ -44,8 +44,8 @@ class ContainerPetDescription extends StatelessWidget {
                           Text ("Next Schedule: ${pet.nextSchedule}",
                               style: Styles.body1.copyWith(fontWeight: FontWeight.bold)
                           ),
-                          Text ("Bloody tipe: ${pet.bloodType}",
-                              style: Styles.body1.copyWith(fontWeight: FontWeight.bold)
+                          Text ("Blood type: ${pet.bloodType}",
+                                style: Styles.body1.copyWith(fontWeight: FontWeight.bold)
                           ),
                         ],
                       ),
