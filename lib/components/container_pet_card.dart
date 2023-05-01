@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_pets/my_pets_app.dart';
+import 'package:my_pets/assets/styles.dart';
 
-import '../model/Pet.dart';
+import '../model/pet.dart';
 
 class ContainerPetDescription extends StatelessWidget {
   const ContainerPetDescription(this.pet, {super.key});
@@ -33,35 +33,23 @@ class ContainerPetDescription extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(pet.name,
-                              style: TextStyle(
-                                color: currentTheme.primary,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,)
+                              style: Styles.header2.copyWith(color: currentTheme.primary)
                           ),
                           Text ("Age: ${pet.age}",
-                              style: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,)
+                              style: Styles.body1.copyWith(fontWeight: FontWeight.bold)
                           ),
                           Text ("Birth Date: ${pet.birthDate}",
-                              style: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,)
+                              style: Styles.body1.copyWith(fontWeight: FontWeight.bold)
                           ),
                           Text ("Next Schedule: ${pet.nextSchedule}",
-                              style: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,)
+                              style: Styles.body1.copyWith(fontWeight: FontWeight.bold)
                           ),
                           Text ("Bloody tipe: ${pet.bloodType}",
-                              style: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,)
+                              style: Styles.body1.copyWith(fontWeight: FontWeight.bold)
                           ),
                         ],
                       ),
-
-                      Spacer(),
+                      const Spacer(),
                       Container(
                         clipBehavior: Clip.hardEdge,
                         decoration: BoxDecoration(
@@ -98,10 +86,7 @@ class ContainerPetDescription extends StatelessWidget {
                                         padding: const EdgeInsets.only(left: 3, right: 3),
                                         child: Text(pet.tags[index],
                                                 maxLines: 1,
-                                                style: TextStyle(
-                                                        color: currentTheme.primary,
-                                                        fontSize: 10
-                                                )
+                                                style: Styles.body2.copyWith(color: currentTheme.primary)
                                             ),
                                       ),
                                         ),

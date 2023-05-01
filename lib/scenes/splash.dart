@@ -10,7 +10,8 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
 
   void initializeSplash()async{
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
+    // ignore: use_build_context_synchronously
     Navigator.pushReplacementNamed(context, "/home");
   }
 
@@ -24,15 +25,15 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFa2af9d),
+        backgroundColor: const Color(0xFFa2af9d),
         body: Center(
           child:  Padding(
             padding: const EdgeInsets.all(16.16),
             child: Column(
               children: [
                 Image.asset("images/logo.png"),
-                SizedBox(height: 16,),
-                Text("My Pets", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Color(0xFFEEEEEE),),)
+                const SizedBox(height: 16,),
+                const Text("My Pets", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Color(0xFFEEEEEE),),)
               ],
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../model/Pet.dart';
+import '../model/pet.dart';
 import 'container_pet_card.dart';
 
 class PetListContainer extends StatelessWidget {
