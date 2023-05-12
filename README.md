@@ -2,7 +2,7 @@
 Flutter hybrid application, runs on multiple platforms, but the design was mostly focused on mobile (iOS and Android), even though it can also run on chrome, macOS and windows.
 This is just an academic, developed during the Post Graduation Program "App development" at the "Hybrid App development" course at the PUC-PR University. This project was used to study hybdrid development using Flutter and improve Figma skills learned on past courses from the same Post Graduation Program. 
 As an iOS developer, I wanted to understand simple components and behaviors that are common to usual applications. So this applications may look simple, but it uses a lot of common components and ideas that improves and build a good knowledge and understanding of flutter that would be important on more complex projects.
-
+  
 Project layout was done on Figma, using all good practice methods: components, auto layout, components variants, runnable prototype and more.
 Project final design options:
 
